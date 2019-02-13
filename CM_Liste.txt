@@ -1,0 +1,12 @@
+*** Vehicle List of the CarManager
+*** a list of available vehicles
+*** 
+*** Fahrzeugtyp 	Hersteller	Modell           
+***------------------------------------------------
+	PKW		Mercedes	A-Klasse     
+	PKW		Mercedes        AMG GT
+	PKW		Audi		S8
+	PKW		Audi		A6
+	LKW		MAN		blabla
+	PKW		Jeep		Grand Cherokee
+	

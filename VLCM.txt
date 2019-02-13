@@ -1,0 +1,24 @@
+*** Vehicle List of the CarManager
+*** a list of available vehicles
+*** 
+*** Hersteller          Modell                  Baujahr
+***----------------------------------------------------
+Mercedes-Benz           A-Klasse                1999 
+Audi                    S8                      2012 
+Audi                    TT-Coupe                2014 
+Audi                    A7-Sportback            2017 
+Audi                    A1                      2014 
+BMW                     BR-2-Coupe              2013 
+BMW                     BR-1-Lim.               2015 
+BMW                     BR-3-Lim.               2011 
+BMW                     BR-5-touring            2017 
+BMW                     BR-6                    1976 
+BMW                     BR-X7                   2018 
+Mercedes-Benz           AMG-GT                  2014 
+Mercedes-Benz           R-Klasse                2005 
+Mercedes-Benz           T-Modell                1977 
+Mercedes-Benz           E-Klasse                2016 
+Mercedes-Benz           S-Klasse-Lim.           2015 
+Mercedes-Benz           CLA-Klasse              2014 
+Mercedes-Benz           M-Klasse                2011 
+
