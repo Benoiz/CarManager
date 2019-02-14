@@ -116,7 +116,7 @@ void switchEntries(t_field *f, int indexA, int indexB)
 	t_car *carB_after = FindEntryByIndex(f, indexB + 1);
 
 	if (carA_after == carB && carB_before == carA) 
-	{								//CASE 1: carB is after to carA
+	{								//CASE 1: carB is after carA
 		if (carA_before) 
 		{
 			carB->before = carA_before;
@@ -157,7 +157,7 @@ void switchEntries(t_field *f, int indexA, int indexB)
 		}
 		else {
 			if (!carA_before && carA_after && carB_before && carB_after) 
-			{			//CASE 3: carA is first Item
+			{			//CASE 3: carA is first entry
 				carB->before = 0;
 				f->start = carB;
 				carB->after = carA_after;
@@ -169,7 +169,7 @@ void switchEntries(t_field *f, int indexA, int indexB)
 			}
 			else {
 				if (carA_before && carA_after && carB_before && !carB_after) 
-				{		//CASE 4: carB is before Item
+				{		//CASE 4: carB is before entry
 					carA->after = 0;
 					f->temp = carA;
 					carA->before = carB_before;
@@ -182,7 +182,7 @@ void switchEntries(t_field *f, int indexA, int indexB)
 				}
 				else {
 					if (!carA_before && carA_after && carB_before && !carB_after) 
-					{	//CASE 5: carA ist first and carB ist before Item
+					{	//CASE 5: carA ist first and carB is before entry
 						carB->before = 0;
 						f->start = carB;
 						carB->after = carA_after;

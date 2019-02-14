@@ -34,7 +34,7 @@ void ShowMenu(t_field* f)
 		break;
 	case'3':
 		system("cls");
-		EntryPrompt(f);
+		EntryPrompt(f, 0);
 		ShowMenu(f);
 		break;
 	case'4':
@@ -72,8 +72,7 @@ void ShowMenu(t_field* f)
 			break;
 		default:
 			ShowMenu(f);
-			break;
-			
+			break;	
 		}
 		ShowMenu(f);
 		break;
@@ -91,13 +90,18 @@ void ShowMenu(t_field* f)
 		ShowMenu(f);
 		break;
 	case'8':
-		printf("Goodbye and thank god the program didn't crash!\n");
+		printf("Goodbye!");
+		_getch();
+		exit(0);
 		break;
 	case 27: //ESC as char int
-			printf("Goodbye and thank god the program didn't crash!\n");
-			break;
+		printf("Goodbye!\n");
+		_getch();
+		exit(0);
+		break;
 	default:
-		printf("Error occurred! What did you do?\n");
+		printf("Error occurred! Stop it!\n");
+		ShowMenu(f);
 			break;
 
 	}
@@ -119,4 +123,39 @@ void ShowMenu(t_field* f)
 		printf("***\n");
 		printf("*** Ind            Hersteller           Modell            Baujahr\n");
 		printf("***--------------------------------------------------------------\n");
+	}
+
+	void ShowSelectedEntry(t_field* f, int indx)
+	{	
+		system("cls");
+		int input = 0;
+		f->current = FindEntryByIndex(f, indx);
+		//printf("\nSelected Entry:\n");
+		GUIHead();
+		printf("\t%-10i %-20s %-20s %-20s\n", f->current->index, f->current->manufacturer, f->current->model, f->current->year);
+		printf("\nOptions:\n");
+		printf("1: Add another entry after this one\n");
+		printf("2: Delete this entry\n");
+		printf("3: to go back\n");
+		printf("Choose: ");
+
+		scanf("%i", &input);
+		switch(input)
+		{
+		case 1:
+			EntryPrompt(f, indx);
+			break;
+		case 2:
+			DeleteEntry(f, indx);
+			break;
+		case 3:
+			ShowEntries(f);
+			break;
+		default:
+			ShowSelectedEntry(f, indx);
+			break;
+			}
+		ShowMenu(f);
+
+
 	}
